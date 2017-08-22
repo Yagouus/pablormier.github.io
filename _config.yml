@@ -7,7 +7,7 @@ plugins:             [jekyll-paginate]
 # Setup
 title:               Pablo R. Mier
 tagline:             'A bunch of random things'
-description:         'A postdoctoral research fellow interested in Computer Science and Artificial Intelligence. I just want to understand how things work, and drink coffee.'
+description:         'A postdoctoral researcher interested in Computer Science and Artificial Intelligence. I just want to understand how things work. And drink coffee. A lot of coffee.'
 url:                 https://pablormier.github.io
 avatar:              https://avatars3.githubusercontent.com/u/1433810?v=4&u=762e22fcca444cb9b26c1302dca5f5f07f6076d4&s=400
 baseurl:             ''
