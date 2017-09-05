@@ -1,0 +1,39 @@
+/* 
+ * Create figures (centered with caption)
+ * Based on: 
+ * https://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-jekyll
+ * https://stackoverflow.com/questions/255170/markdown-and-image-alignment
+ */
+*[src*='#center'],
+img[alt^="figure"],
+img[alt^="figure"] + em {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    float: none!important;
+}
+
+img[alt^="figure"] + em {
+    font-size: 80%;
+    max-width: 80%;
+    text-align: center;
+}
+
+img[alt="avatar"]{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;    
+}
+
+.page > p,
+.post > p,
+.post > blockquote {
+    text-align: justify;
+}
+
+a {
+    color: #af1156;
+}
