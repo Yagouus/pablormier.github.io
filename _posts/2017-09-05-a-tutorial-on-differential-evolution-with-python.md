@@ -42,7 +42,7 @@ def fobj(x):
 
 * __bounds__: a list with the lower and upper bound for each parameter of the function. For example: \\(bounds_x=\\) [(-5, 5), (-5, 5), (-5, 5), (-5, 5)] means that each variable \\(x_i, i \in [1, 4]\\) is bound to the interval [-5, 5].
 
-* __mut__: mutation constant, a float usually between [0, 2]. Larger mutation constants increases the search radius but may slowdown the convergence. We will see this later.
+* __mut__: mutation constant, a float usually between [0, 2]. Larger mutation constants increases the search radius but may slowdown the convergence.
 
 * __crossp__: probability of crossover, a float between [0, 1]. A value closer to 1 increases the number of changes in the population.
 
