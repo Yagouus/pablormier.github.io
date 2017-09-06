@@ -20,11 +20,7 @@ Before getting into more technical details, let's get our hands dirty. One thing
 <script src="https://gist.github.com/pablormier/0caff10a5f76e87857b44f63757729b0.js"></script>
 
 This code is completely functional, you can paste it into a python terminal and start playing with it (you need numpy >= 1.7.0). Don't worry if you don't understand anything, we will see later what is the meaning of each line in this code. The good thing is that we can start playing with this right now without knowing how this works.
-Let's take a look at the parameters required by the algorithm:
-
-```python
-def de(fobj, bounds, mut=0.8, crossp=0.7, popsize=20, its=1000):
-```
+The only two mandatory parameters that we need to provide are __fobj__ and __bounds__:
 
 * __fobj__: \\(f(x)\\) function to optimize. Can be a function defined with a `def` or a lambda expression. For example, suppose we want to minimize the function \\(f(x)=\sum_i^n x_i^2/n\\). If `x` is a numpy array, our fobj can be defined as:
     
@@ -41,14 +37,6 @@ def fobj(x):
     ```
 
 * __bounds__: a list with the lower and upper bound for each parameter of the function. For example: \\(bounds_x=\\) [(-5, 5), (-5, 5), (-5, 5), (-5, 5)] means that each variable \\(x_i, i \in [1, 4]\\) is bound to the interval [-5, 5].
-
-* __mut__: mutation constant, a float usually between [0, 2]. Larger mutation constants increases the search radius but may slowdown the convergence.
-
-* __crossp__: probability of crossover, a float between [0, 1]. A value closer to 1 increases the number of changes in the population.
-
-* __popsize__: number of individuals (vectors) in the population. Larger number of vectors are usually better for high dimensional problems.
-
-* __its__: number of iterations (generations) performed by the algorithm.
 
 
 For example, let's find the value of x that minimizes the function \\(f(x) = x^2\\), looking for values of \\(x\\) between -100 and 100:
@@ -252,7 +240,7 @@ array([[ 0.04,  0.87,  0.52,  0.  ],  # a
 >>> a, b, c = pop[selected]
 ```
 
-Now, we create a mutant vector by combining _a_, _b_ and _c_. How? by computing the _difference_ (now you know why it's called _differential_ evolution) between _b_ and _c_ and adding those differences to _a_ after multiplying them by the mutation factor (using for example mut=0.8):
+Now, we create a mutant vector by combining _a_, _b_ and _c_. How? by computing the _difference_ (now you know why it's called _differential_ evolution) between _b_ and _c_ and adding those differences to _a_ after multiplying them by a constant called mutation factor (parameter __mut__). A larger mutation factor increases the search radius but may slowdown the convergence of the algorithm. Values for __mut__ are usually chosen from the interval [0.5, 2.0]. For this example, we will use the default value of mut = 0.8:
 
 ```python
 # mut = 0.8
