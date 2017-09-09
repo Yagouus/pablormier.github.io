@@ -6,19 +6,19 @@ plugins:             [jekyll-paginate]
 paginate_path:       "page:num"
 
 # Setup
-title:               Pablo R. Mier
+title:               Yago Fontenla Seco
 tagline:             'A bunch of random numbers'
-description:         'A postdoctoral researcher interested in Computer Science and Artificial Intelligence. I just want to understand how things work, and drink coffee.'
-url:                 https://pablormier.github.io
-avatar:              https://avatars3.githubusercontent.com/u/1433810?v=4&u=762e22fcca444cb9b26c1302dca5f5f07f6076d4&s=400
+description:         'A computer engineer mastering in AI. My brain works with coffee and music.'
+url:                 https://yagouus.github.io
+avatar:              https://avatars1.githubusercontent.com/u/9059328?v=4&s=460
 baseurl:             ''
 paginate:            5
 
 # About/contact
 author:
-  name:              Pablo R. Mier
-  url:               https://twitter.com/pablormier
-  email:             pablo.rodriguez.mier@gmail.com
+  name:              Yago Fontenla Seco
+  url:               https://twitter.com/yagouus
+  email:             yago.fontenla.seco@gmail.com
   
 # Custom vars
 version:             1.0.0
